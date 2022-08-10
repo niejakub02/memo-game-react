@@ -1,0 +1,137 @@
+.card {
+    height: 10rem;
+    width: 10rem;
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, .5);
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    position: relative;
+    transition: background-color .5s ease-in-out;
+    cursor: pointer;
+}
+
+.card > * {
+    pointer-events: none;
+}
+
+.card--empty {
+    visibility: hidden;
+}
+
+.card__image {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.card.card-flip--first .card__image {
+    animation-name: flip-fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+.card.card-flip--first .card__content {
+    animation-name: flip-fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.card.card-flip--second .card__image {
+    animation-name: flip-fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+.card.card-flip--second .card__content {
+    animation-name: flip-fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.card-flip--first {
+    animation-name: flip-first;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.card-flip--second {
+    animation-name: flip-second;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.card__content, .card__image {
+    transform: rotate3d(0, 1, 0, 180deg);
+    position: absolute;
+    margin: 0 auto;
+}
+
+.card--success {
+    background-color: darkgreen;
+}
+
+.card--failure {
+    background-color: darkred;
+}
+
+@keyframes flip-fade-in {
+    0% {
+        opacity: 0;
+    }
+  
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flip-fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flip-first {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+  
+    100% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+}
+
+@keyframes flip-second {
+    0% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+  
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+@keyframes slide {
+    from {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 180deg);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0) rotate3d(0, 1, 0, 180deg);
+    }
+}
+  
+.card--slide {
+    animation-name: slide;
+}

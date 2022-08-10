@@ -1,0 +1,24 @@
+{
+    "idioms": [
+        {
+            "id": 1,
+            "eng": "It’s raining cats and dogs",
+            "pl": "Leje jak z cebra"
+        },
+        {
+            "id": 2,
+            "eng": "Let the cat out of the bag",
+            "pl": "Wygadać się"
+        },
+        {
+            "id": 3,
+            "eng": "It’s not a rocket science",
+            "pl": "To nie jest zbyt skomplikowane"
+        },
+        {
+            "id": 4,
+            "eng": "No pain, no gain",
+            "pl": "Trzeba pracować na efekty"
+        }
+    ]
+}

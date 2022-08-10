@@ -1,0 +1,12 @@
+.app {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(40,214,167,1) 0%, rgba(74,144,195,1) 100%);
+}
+
+.loading {
+    color: #ffffff;
+}
